@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+    // Basic calculator
+    class BasicCalculator {
+
+        // private variable here
+        #value3;
+        #value4;
+        constructor(value1,value2){
+                this.value1=value1;
+                this.value2=value2;
+                this.#value3=100;
+                this.#value4=20;
+                
+                console.log('This is basic Calculator');
+                console.log('value1--->' +this.value1);
+                console.log('value1--->>' +this.value2);
+
+        }
+         // static one here 
+        static basicCalcTest(){
+
+        console.log('call static here -->');
+        return '-- The Addition,Subtraction,Multiplication,Division,and private Modulus --';
+        }
+
+        addition(){
+            this.add=this.value1+this.value2;
+            
+            console.log('Addition of two numbers--->>' +this.add);
+            return this.value3;
+        }
+        subtraction(){
+            this.sub=this.value1-this.value2;
+            
+            console.log('Subtraction of two numbers--->>' +this.sub);
+            return this.value3;
+        }
+        multiplication(){
+            this.multi=this.value1*this.value2;
+            
+            console.log('Multiplication of two numbers--->>' +this.multi);
+            return this.value3;
+        }
+         // public method impl 
+        divison(){
+            this.div=this.value1/this.value2;
+            
+            console.log('Division of two numbers--->>' +this.div);
+            return this.value3;
+        }
+        
+         // private variable here
+        #modulus(){
+            console.log('call the private modulus method');
+            this.mod=this.#value3%this.#value4;
+            return 'this is the private one here  modlus of two values-->' + "" +this.mod;
+        }
+
+        // privledge one 
+        modulusiMplemtation(){
+            return this.#modulus();
+        }
+
+    }
+
+    // Scientific calculator
+    class ScientificCalc{
+
+        constructor(val1,val2){
+                this.val1=val1;
+                this.val2=val2;
+        }
+        sin(){
+            console.log('Inside sin method');
+            return 'The Sin value of '+this.val1+' and '+ this.val2 +' is '+ Math.sin(this.val1/this.val2);
+        }
+        cos(){
+            console.log('Inside cos method');
+            return 'The Cos value of '+this.val1+' and '+ this.val2 +' is '+ Math.cos(this.val1)*this.val2;
+        }
+        tan(){
+            console.log('Inside tan method');
+            return 'The tan value of '+this.val1+' and '+ this.val2 +' is' + Math.tan(this.val1/this.val2);
+        }
+
+    }   
+
+    //child class 
+    class ChildCalc extends ScientificCalc {
+
+        testChildMethod(){
+        console.log('call the child one')
+        return 'The log value of-->'+ Math.LOG10E; 
+        }
+    }
+
+    // class defination over here
+    BasicCalculator.prototype.abs1=10;
+    BasicCalculator.prototype.absoulte=function(){
+
+             console.log('add extension in class-->');
+        return Math.abs(this.abs1);
+      }
+
+    //object creation
+    let s=new BasicCalculator(10, 5);
+    let sciCalc=new ScientificCalc(100, 50);
+    let childObj=new ChildCalc();
+   
+    console.log('Addition -->' +s.addition());
+    console.log('Subtraction -->' +s.subtraction());
+    console.log('Multiplication -->'+s.multiplication());
+    console.log('Divison -->'+s.divison());
+    console.log('Modulus -->'+s.modulusiMplemtation());
+    console.log('call static here -->' +BasicCalculator.basicCalcTest);
+
+    console.log(sciCalc.sin());
+    console.log(sciCalc.cos());
+    console.log(sciCalc.tan());
+    console.log(childObj.testChildMethod());
+    //console.log(sciCalc.testChildMethod());
+
+    console.log('call the method prototype here -->' +s.absoulte());  
+
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

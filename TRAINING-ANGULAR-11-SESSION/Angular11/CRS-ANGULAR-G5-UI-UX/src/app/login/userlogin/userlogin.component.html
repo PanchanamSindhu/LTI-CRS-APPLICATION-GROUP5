@@ -1,0 +1,105 @@
+<!--<form action="action_page.php" method="post">
+    <div class="imgcontainer">
+      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+    </div>
+  
+    <div class="container">
+        <label for="id"><b>Id</b></label>
+        <input type="text" placeholder="Enter Login Id" name="id" required [(ngModel)]="login.id">
+
+        <label for="role"><b>Role</b></label>
+        <input type="text" placeholder="Enter Role" name="role" required [(ngModel)]="login.role">
+        
+      <label for="userName"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="userName" required [(ngModel)]="login.username">
+  
+      <label for="password"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="password" required [(ngModel)]="login.password"> 
+  
+          
+    </div>
+    <div>
+        <span>
+            {{clickMessage}}
+          </span>
+          
+          <button type="submit"(click)="onClickMe()" class="btn btn-success">Login</button>
+    </div>
+  
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>-->
+
+  <div>
+    <div class="submit-form">
+     
+        <div class="form-group">
+          <label for="name">ID</label>
+          <input
+            type="text"
+            class="form-control"
+            id="id"
+            placeholder="Enter Login Id"
+            required
+            [(ngModel)]="login.id"
+            name="id"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="role">Role</label>
+          <input
+            class="form-control"
+            id="role"
+            placeholder="Enter Role"
+            required
+            [(ngModel)]="login.role"
+            name="role"
+          />
+        </div>
+
+        <div class="form-group">
+            <label for="username">user Name</label>
+            <input
+              class="form-control"
+              id="username"
+              required
+              [(ngModel)]="login.username"
+              name="username"
+            />
+          </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              class="form-control"
+              id="password"
+              required
+              [(ngModel)]="login.password"
+              name="password"
+            />
+          </div>
+          <div>
+            <span>
+                {{clickMessage}}
+              </span>
+              
+              <button (click)="onClickMe()" class="btn btn-success">Login</button>
+        </div>
+        <div class="container" style="background-color:#f1f1f1">
+         
+          <span class="psw">Forgot <a href="#"> Password?</a></span>
+        </div>
+       
+        
+     
+  
+      <!-- <div *ngIf="submitted">
+        <h4>Customer was added successfully!</h4>
+        <button class="btn btn-success" (click)="newCustomer()">Add</button>
+      </div> -->
+    </div>
+  </div>
+ 
